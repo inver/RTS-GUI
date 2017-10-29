@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CommandBase {
+public class CommandBase implements Command {
     private String code;
 }

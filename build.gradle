@@ -46,26 +46,27 @@ project(":desktop") {
         compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
         compile "com.badlogicgames.gdx:gdx-controllers-desktop:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-controllers-platform:$gdxVersion:natives-desktop"
+        compile "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
 
         compile "com.github.czyzby:gdx-websocket-common:$wsLibVersion.$gdxVersion"
     }
 }
 
-project(":ios") {
-    apply plugin: "java"
-    apply plugin: "robovm"
-
-
-    dependencies {
-        compile project(":core")
-        compile "com.mobidevelop.robovm:robovm-rt:$roboVMVersion"
-        compile "com.mobidevelop.robovm:robovm-cocoatouch:$roboVMVersion"
-        compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
-        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
-
-    }
-}
+//project(":ios") {
+//    apply plugin: "java"
+//    apply plugin: "robovm"
+//
+//
+//    dependencies {
+//        compile project(":core")
+//        compile "com.mobidevelop.robovm:robovm-rt:$roboVMVersion"
+//        compile "com.mobidevelop.robovm:robovm-cocoatouch:$roboVMVersion"
+//        compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
+//        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
+//        compile "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-ios"
+//
+//    }
+//}
 
 //project(":html") {
 //    apply plugin: "gwt"
@@ -94,6 +95,7 @@ project(":core") {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+        compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
 
         compile "com.github.czyzby:gdx-websocket:$wsLibVersion.$gdxVersion"
 

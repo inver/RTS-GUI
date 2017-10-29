@@ -3,13 +3,13 @@ package net.nevinsky.rts.gui;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
-import net.nevinsky.rts.gui.core.Game;
+import net.nevinsky.rts.gui.core.GameObject;
 
 public class RtsInputProcessor implements InputProcessor {
 
-    private final Game game;
+    private final GameObject game;
 
-    public RtsInputProcessor(Game game) {
+    public RtsInputProcessor(GameObject game) {
         this.game = game;
     }
 

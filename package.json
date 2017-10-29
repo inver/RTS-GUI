@@ -1,0 +1,6 @@
+{
+  "name": "rtsGui",
+  "version": "1.0.0",
+  "description": "Gui for AI Rts",
+  "main": "scripts/app.js"
+}

@@ -10,7 +10,7 @@ import static net.nevinsky.rts.gui.net.dto.Commands.REGISTER;
 
 @Getter
 @Setter
-public class CommandRegister implements Serializable {
+public class CommandRegister implements Serializable, Command {
 
     private String code;
     private String type;

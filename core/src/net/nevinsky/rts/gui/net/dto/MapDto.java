@@ -10,7 +10,7 @@ public class MapDto {
 
     @Getter
     @Setter
-    private static class Size {
+    public static class Size {
         private float x;
         private float y;
     }

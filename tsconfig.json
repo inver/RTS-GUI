@@ -1,0 +1,12 @@
+{
+  "files": [
+    "src/scripts/app.ts",
+    "src/scripts/libs/pixi.js.d.ts"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "inlineSources": true
+  }
+}
