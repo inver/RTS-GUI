@@ -51,8 +51,14 @@ public class GameScreenInputHandler extends InputAdapter {
     @Override
     public boolean scrolled(int amount) {
         OrthographicCamera c = (OrthographicCamera) camera;
-        c.zoom = c.zoom + amount;
-        zoom = c.zoom;
-        return true;
+        if (c.zoom + amount > 0 && c.zoom + amount < 15) {
+            c.zoom = c.zoom + amount;
+            zoom = c.zoom;
+
+            Gdx.app.log("ZOOM", "Current zoom is: " + zoom);
+            return true;
+        }
+        Gdx.app.log("ZOOM", "Current zoom is: " + zoom);
+        return false;
     }
 }

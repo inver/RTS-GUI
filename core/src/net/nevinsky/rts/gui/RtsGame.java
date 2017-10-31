@@ -58,7 +58,7 @@ public class RtsGame extends Game {
     }
 
     private void initFonts() {
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("core/resources/RussoOne-Regular.ttf"));
+        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.classpath("RussoOne-Regular.ttf"));
         FreeTypeFontGenerator.FreeTypeFontParameter param = new FreeTypeFontGenerator.FreeTypeFontParameter();
         param.characters = FONT_CHARACTERS; // Наши символы
 

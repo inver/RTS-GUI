@@ -11,6 +11,8 @@ import net.nevinsky.rts.gui.screens.game.actors.Mariner;
 import java.util.ArrayList;
 import java.util.List;
 
+import static net.nevinsky.rts.gui.screens.game.Constants.toPixels;
+
 /**
  * @author Alexey Nevinsky
  * @since 29-10-2017
@@ -21,7 +23,6 @@ public class GameWorld {
 
     @Getter
     private List<Actor> actors = new ArrayList<Actor>();
-    private Mariner mariner;
 
     private Map map;
 
@@ -41,16 +42,16 @@ public class GameWorld {
         if (dto.getUnits() != null) {
             Mariner m;
             for (UnitDto unitDto : dto.getUnits()) {
-                m = new Mariner(unitDto.getSize() * Constants.FLOAT_TO_PIXELS);
-                m.setX(unitDto.getPosition().getX());
-                m.setY(unitDto.getPosition().getY());
+                m = new Mariner(unitDto);
+                m.setX(toPixels(unitDto.getPosition().getX()));
+                m.setY(toPixels(unitDto.getPosition().getY()));
                 actors.add(m);
             }
         }
     }
 
     private void initMap(GameStateDto dto) {
-        map = new Map(dto.getMap().getSize().getX() * Constants.FLOAT_TO_PIXELS, dto.getMap().getSize().getY() * Constants.FLOAT_TO_PIXELS);
+        map = new Map(toPixels(dto.getMap().getSize().getX()), toPixels(dto.getMap().getSize().getY()));
         actors.add(map);
     }
 
